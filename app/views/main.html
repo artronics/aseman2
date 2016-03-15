@@ -1,0 +1,16 @@
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-12" ng-controller="PacketController as packetCtrl">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Packets <span class="pull-right"></span></h3>
+                </div>
+                <div class="panel-body">
+                    <div ui-grid=packetCtrl.gridOptions class="packets"></div>
+                    <!--<p ng-bind="packetCtrl.packets.lastPacketId"></p>-->
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="row">
+    <div ng-controller="MapController as mapCtrl">
+        <div class="col-md-6" ng-repeat="client in mapCtrl.clients">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Client ID:<span>{{client.rid}}</span></h3>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <div ng-repeat="sensor in client.sensors" class="sensors">
+                            <h5 class="sensor fa fa-1x fa-star">Sensor Address: <span class="sensor-local-add">{{sensor.localAdd}}</span>
+                            </h5>
+                            <h5 class="neighbours">Neighbors: </h5>
+                            <div class="link-table">
+                                <table class="table ">
+                                    <tr>
+                                        <th>ADD</th>
+                                        <th>Weight</th>
+                                    </tr>
+                                    <tr ng-repeat="link in sensor.links">
+                                        <td>{{link.dstAdd}}</td>
+                                        <td>{{link.weight}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </ul>
+                    <!--<p ng-bind="packetCtrl.packets.lastPacketId"></p>-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
